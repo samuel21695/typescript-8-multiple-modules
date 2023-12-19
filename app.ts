@@ -28,3 +28,15 @@ const pokemonList: Pokemon[] = [
   { name: '꼬부기', id: 4 },
   { name: '버터풀', id: 5 }
 ];
+
+let battles: number = 0;
+
+function renderPokemons(pokemons: Pokemon[]): string {
+  let pokemonButtonsHtml = '';
+
+  for (let pokemon of pokemons) {
+    pokemonButtonsHtml += createElement('button', { id: `pokemon-${pokemon.id}`, 'data-pokemon': pokemon.name }, `${pokemon.name}와 배틀하기`);
+  }
+
+  return createElement('div', {}, `배틀 횟수: ${battles}`, pokemonButtonsHtml);
+}
