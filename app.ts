@@ -21,3 +21,10 @@ type Pokemon = {
   id: number;
 };
 
+const pokemonList: Pokemon[] = [
+  { name: '피카츄', id: 1 },
+  { name: '이상해씨', id: 2 },
+  { name: '파이리', id: 3 },
+  { name: '꼬부기', id: 4 },
+  { name: '버터풀', id: 5 }
+];
