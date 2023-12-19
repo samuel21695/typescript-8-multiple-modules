@@ -15,3 +15,9 @@ function createElement(tagName: string, props: Props, ...children: string[]): st
 
   return `<${tagName} ${propString.trim()}>${children.join('')}</${tagName}>`;
 }
+
+type Pokemon = {
+  name: string;
+  id: number;
+};
+
