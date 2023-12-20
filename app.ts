@@ -64,3 +64,17 @@ function handleBattle(pokemonName: string): void {
   battles += 1;
   updateUI('root')
 }
+
+function updateUI(rootId: string): void {
+  const root = document.getElementById(rootId);
+
+  if (root === null) {
+    return;
+  }
+
+  root.innerHTML = renderPokemons(pokemonList);
+  setupEventListeners(rootId, pokemonList);
+}
+
+// 초기 렌더링 및 이벤트 리스너 설정
+updateUI('root');
