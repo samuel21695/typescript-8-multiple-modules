@@ -58,3 +58,9 @@ function setupEventListeners(rootId: string, pokemons: Pokemon[]): void {
     button.addEventListener('click', () => handleBattle(pokemon.name));
   }
 }
+
+function handleBattle(pokemonName: string): void {
+  console.log(`${pokemonName}와의 배틀이 시작되었습니다!`);
+  battles += 1;
+  updateUI('root')
+}
